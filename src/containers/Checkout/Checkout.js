@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 
 import CheckoutSummary from '../../components/Order/CheckoutSummary/CheckoutSummary';
 import ContactData from './ContactData/ContactData';
-import axios from '../../axios-orders';
 
 
 class Checkout extends Component {
@@ -24,7 +23,6 @@ class Checkout extends Component {
 				ingredients[param[0]] = +param[1];
 			}
 		}
-		console.log(ingredients);
 		this.setState({ingredients: ingredients, totalPrice: price});	
 	}
 	checkoutCancelledHandler = () => {
