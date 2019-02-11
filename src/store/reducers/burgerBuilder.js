@@ -1,5 +1,5 @@
 import * as actionTypes from "../actions/actionsTypes";
-import { updateObject } from "../utility";
+import { updateObject } from "../../shared/utility";
 
 const initialState = {
   ingredients: null,
@@ -59,7 +59,6 @@ const fetchIngredientsFailed = (state, action) => {
 }
 
 const reducer = (state = initialState, action) => {
-  console.log("Ingredient prices: ", INGREDIENT_PRICES[action.ingredientName]);
   switch (action.type) {
     case actionTypes.ADD_INGREDIENT:
       return addIngredient(state, action);
